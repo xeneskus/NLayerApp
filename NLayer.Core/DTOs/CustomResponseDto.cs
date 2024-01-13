@@ -15,7 +15,7 @@ namespace NLayer.Core.DTOs
         public List<String> Errors { get; set; }
 
 
-        public static CustomResponseDto<T> Success(int statusCode,T data)
+        public static CustomResponseDto<T> Success(int statusCode, T data)
         {
             return new CustomResponseDto<T> { Data = data, StatusCode = statusCode };
         }
@@ -26,7 +26,7 @@ namespace NLayer.Core.DTOs
 
         public static CustomResponseDto<T> Fail(int statusCode, List<string> errors)
         {
-            return new CustomResponseDto<T> { StatusCode = statusCode, Errors=errors };
+            return new CustomResponseDto<T> { StatusCode = statusCode, Errors = errors };
         }
 
         public static CustomResponseDto<T> Fail(int statusCode, string error)

@@ -25,9 +25,9 @@ namespace NLayer.Caching
             _memoryCache = memoryCache;
             _repository = repository;
             _unitOfWork = unitOfWork;
-            if(!_memoryCache.TryGetValue(CacheProductKey,out _)) //uygulama ilk ayağa kalktıgında cache de yoksa oluşturacak
+            if (!_memoryCache.TryGetValue(CacheProductKey, out _)) //uygulama ilk ayağa kalktıgında cache de yoksa oluşturacak
             {
-                _memoryCache.Set(CacheProductKey,_repository.GetProductsWithCategory().Result);
+                _memoryCache.Set(CacheProductKey, _repository.GetProductsWithCategory().Result);
             }
         }
 
@@ -67,7 +67,7 @@ namespace NLayer.Caching
 
             }
             return Task.FromResult(product);
-          
+
         }
 
         public Task<List<ProductWithCategoryDto>> GetProductsWithCategory()

@@ -14,7 +14,7 @@ namespace NLayer.Repository.Configurations
 
             builder.ToTable("Categories");
 
-           
+
 
 
         }

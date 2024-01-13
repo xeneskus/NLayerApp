@@ -48,7 +48,7 @@ public class Service<T> : IService<T> where T : class
         if (hasProduct == null)
         {
             throw new NotFoundException($"{typeof(T).Name}({id}) not found");
-            
+
         }
         return hasProduct;
     }
