@@ -24,7 +24,6 @@ namespace NLayer.Web.Services
             var response = await _httpClient.GetFromJsonAsync<CustomResponseDto<ProductDto>>($"products/{id}");
             return response.Data;
 
-
         }
 
         public async Task<ProductDto> SaveAsync(ProductDto newProduct)

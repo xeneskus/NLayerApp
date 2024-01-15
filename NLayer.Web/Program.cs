@@ -21,14 +21,19 @@ builder.Services.AddDbContext<AppDbContext>(x =>
     });
 });
 
-builder.Services.AddHttpClient<ProductApiService>(options =>
+builder.Services.AddHttpClient<ProductApiService>(opt =>
 {
-    options.BaseAddress = new Uri(builder.Configuration["BaseUrl"]);
+
+    opt.BaseAddress = new Uri(builder.Configuration["BaseUrl"]);
+
 });
-builder.Services.AddHttpClient<CategoryApiService>(options =>
+builder.Services.AddHttpClient<CategoryApiService>(opt =>
 {
-    options.BaseAddress = new Uri(builder.Configuration["BaseUrl"]);
+
+    opt.BaseAddress = new Uri(builder.Configuration["BaseUrl"]);
+
 });
+
 
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
