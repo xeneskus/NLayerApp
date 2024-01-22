@@ -68,6 +68,7 @@ namespace NLayer.API.Controllers
             await _service.RemoveAsync(product);
             return CreateActionResult(CustomResponseDto<List<NoContentDto>>.Success(204));
         }
+
     }
 
 }
